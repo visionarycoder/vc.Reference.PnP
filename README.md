@@ -12,7 +12,7 @@ The examples are grouped by the original GoF categories. They are intentionally 
 
 ```powershell
 dotnet build VisionaryCoder.PnP.slnx
-dotnet run --project src/csharp/design_patterns/DesignPatterns.Behavioral
+dotnet run --project src/csharp/design-patterns/DesignPatterns.Behavioral
 ```
 
 ## Pattern catalog
@@ -26,7 +26,7 @@ dotnet run --project src/csharp/design_patterns/DesignPatterns.Behavioral
 ## Layout
 
 ```text
-src/csharp/design_patterns/
+src/csharp/design-patterns/
 ├── DesignPatterns.Creational/
 ├── DesignPatterns.Structural/
 └── DesignPatterns.Behavioral/
