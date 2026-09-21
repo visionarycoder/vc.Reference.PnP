@@ -7,6 +7,16 @@ description: Spectre.Console demonstrations that exercise the pure structural pa
 
 This executable is the presentation edge for structural examples. It references `../../structural/DesignPatterns.Structural.csproj`; the pattern contracts and collaborators remain in that library.
 
+The preserved richer scenarios are grouped under:
+
+- `adapter/` for media and legacy-database adaptation.
+- `bridge/` for notification channels and senders.
+- `composite/` for file-system and organization trees.
+- `decorator/` for text pipelines and beverages.
+- `facade/` for user management.
+- `flyweight/` for characters, text, and sprites.
+- `proxy/` for documents and images.
+
 Run it with:
 
 ```powershell

@@ -17,6 +17,6 @@ Exactly one shared instance represents a genuine application-wide resource or po
 
 Dependencies should be explicit, lifetimes are scoped, or tests need substitutes; prefer dependency injection in those cases.
 
-## Source
+## Required files
 
-Start with [Singleton.cs](Singleton.cs) for the lazy singleton implementation and [ConfigurationManager.cs](ConfigurationManager.cs) for a configuration-oriented example. [SingletonBase.cs](SingletonBase.cs) contains the shared base behavior.
+- [Canonical.cs](Canonical.cs): a lazy, thread-safe singleton access point.

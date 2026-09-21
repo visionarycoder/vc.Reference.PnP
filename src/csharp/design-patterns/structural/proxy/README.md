@@ -17,4 +17,6 @@ Access needs authorization, caching, logging, remote indirection, or lazy initia
 
 The added layer does not provide meaningful access control or lifecycle value.
 
-See [SecureDocumentProxy.cs](SecureDocumentProxy.cs) and [CachingDocumentProxy.cs](CachingDocumentProxy.cs).
+## Required files
+
+- [Roles.cs](Roles.cs): [ISubject](Roles.cs), [RealSubject](Roles.cs), and [Proxy](Roles.cs).

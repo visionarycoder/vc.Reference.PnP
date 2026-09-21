@@ -17,6 +17,6 @@ Requests need ordered, optional processing such as authentication, authorization
 
 Every request must have one fixed handler or the handler order would obscure required behavior.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Handler.cs](Handler.cs) — handler contract and the abstract forwarding handler.

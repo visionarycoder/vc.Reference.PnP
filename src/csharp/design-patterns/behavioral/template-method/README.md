@@ -17,6 +17,6 @@ Several algorithms share a stable sequence but vary at well-defined extension po
 
 Composition through Strategy is clearer or inheritance would create rigid coupling.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [TemplateMethod.cs](TemplateMethod.cs) — invariant algorithm and overridable steps.

@@ -17,4 +17,6 @@ Clients need to perform the same operation over leaves and nested groups.
 
 The object graph is not a meaningful hierarchy or leaf and group operations differ substantially.
 
-See [FileSystemComponent.cs](FileSystemComponent.cs) and [Directory.cs](Directory.cs).
+## Required files
+
+- [Roles.cs](Roles.cs): [Component](Roles.cs), [Leaf](Roles.cs), and [Composite](Roles.cs).

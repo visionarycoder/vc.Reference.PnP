@@ -17,6 +17,6 @@ State-dependent behavior has become complex conditional logic or states have dis
 
 There are only a few simple conditions and separate state objects would hide straightforward logic.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [State.cs](State.cs) — state contract and context role.

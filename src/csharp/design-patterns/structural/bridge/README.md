@@ -17,4 +17,6 @@ Two independent dimensions of variation would otherwise produce a growing inheri
 
 The abstraction and implementation are stable and have no independent variation.
 
-See [NotificationChannel.cs](NotificationChannel.cs) and [IMessageSender.cs](IMessageSender.cs).
+## Required files
+
+- [Roles.cs](Roles.cs): [Abstraction](Roles.cs), [RefinedAbstraction](Roles.cs), [Implementor](Roles.cs), and [ConcreteImplementor](Roles.cs).

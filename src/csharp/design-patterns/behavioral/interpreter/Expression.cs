@@ -1,10 +1,21 @@
 namespace Snippets.DesignPatterns.Behavioral.Interpreter;
 
-public abstract class Expression
+public interface IExpression
 {
-    public abstract double Interpret(ExpressionContext context);
-    public override abstract string ToString();
+    int Interpret(IReadOnlyDictionary<string, int> context);
+}
 
-    // Visitor pattern support for expression analysis
-    public abstract TResult Accept<TResult>(IExpressionVisitor<TResult> visitor);
+public sealed class NumberExpression(int value) : IExpression
+{
+    public int Interpret(IReadOnlyDictionary<string, int> context) => value;
+}
+
+public sealed class VariableExpression(string name) : IExpression
+{
+    public int Interpret(IReadOnlyDictionary<string, int> context) => context[name];
+}
+
+public sealed class AddExpression(IExpression left, IExpression right) : IExpression
+{
+    public int Interpret(IReadOnlyDictionary<string, int> context) => left.Interpret(context) + right.Interpret(context);
 }

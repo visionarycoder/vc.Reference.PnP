@@ -17,6 +17,6 @@ Constructing a configured object is expensive or callers need new instances that
 
 The object graph cannot be copied safely or ordinary construction is simpler and less error-prone.
 
-## Source
+## Required files
 
-Start with [IPrototype.cs](IPrototype.cs), [Document.cs](Document.cs), and [DocumentPrototypeRegistry.cs](DocumentPrototypeRegistry.cs). [DeepCloneableBase.cs](DeepCloneableBase.cs) supports deep copying.
+- [Canonical.cs](Canonical.cs): a cloneable concrete prototype.

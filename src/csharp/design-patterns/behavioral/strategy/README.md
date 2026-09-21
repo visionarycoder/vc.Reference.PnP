@@ -17,6 +17,6 @@ Clients need to choose or change an algorithm without knowing its implementation
 
 The variations are trivial or a delegate would express the extension point more clearly.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Strategy.cs](Strategy.cs) — strategy contract and configurable context.

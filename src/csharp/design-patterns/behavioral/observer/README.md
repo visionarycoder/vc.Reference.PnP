@@ -17,6 +17,6 @@ Independent listeners must react to state changes without the subject knowing th
 
 Notification ordering, delivery guarantees, or lifecycle ownership need a stronger messaging abstraction.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Observer.cs](Observer.cs) — subject and observer contracts with a notifying subject.

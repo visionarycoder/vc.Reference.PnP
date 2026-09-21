@@ -17,6 +17,6 @@ Actions need deferred execution, history, undo, or composition into macros.
 
 An operation is simple, immediate, and does not benefit from a separate command object.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Command.cs](Command.cs) — command contract, receiver adapter, and invoker.

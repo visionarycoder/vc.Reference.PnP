@@ -17,6 +17,6 @@ An object has optional parts or must be assembled through a deliberate sequence 
 
 A simple constructor or object initializer communicates the construction clearly.
 
-## Source
+## Required files
 
-Start with [IComputerBuilder.cs](IComputerBuilder.cs), [ComputerBuilder.cs](ComputerBuilder.cs), and [ComputerDirector.cs](ComputerDirector.cs). [Computer.cs](Computer.cs) is the resulting product.
+- [Canonical.cs](Canonical.cs): product, builder contract, concrete builder, and director.

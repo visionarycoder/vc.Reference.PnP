@@ -17,6 +17,6 @@ You must select a coherent family of products, such as platform-specific UI cont
 
 Only one product varies independently; use Factory Method instead.
 
-## Source
+## Required files
 
-Start with [IUIFactory.cs](IUIFactory.cs), [UIFactoryProvider.cs](UIFactoryProvider.cs), and [Application.cs](Application.cs). The platform-specific factories and controls show each product family.
+- [Canonical.cs](Canonical.cs): abstract factory, two abstract products, and one concrete product family.

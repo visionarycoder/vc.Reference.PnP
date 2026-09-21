@@ -17,6 +17,6 @@ Clients need one or more traversal strategies over a collection or tree.
 
 Normal C# enumeration is sufficient and a custom traversal adds no meaningful behavior.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Iterator.cs](Iterator.cs) — aggregate and iterator contracts with a list implementation.

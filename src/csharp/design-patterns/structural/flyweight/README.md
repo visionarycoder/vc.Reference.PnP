@@ -17,4 +17,6 @@ Large numbers of similar objects create measurable memory pressure.
 
 Object counts are modest or splitting state makes the model harder to use than it saves.
 
-See [CharacterFlyweightFactory.cs](CharacterFlyweightFactory.cs) and [CharacterFlyweight.cs](CharacterFlyweight.cs).
+## Required files
+
+- [Roles.cs](Roles.cs): [Flyweight](Roles.cs) and [FlyweightFactory](Roles.cs).

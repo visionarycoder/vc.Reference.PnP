@@ -17,6 +17,6 @@ The element structure is stable and many distinct operations must be added over 
 
 Element types change often, because every visitor must then be updated.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Visitor.cs](Visitor.cs) — visitor, element, and double-dispatch contracts.

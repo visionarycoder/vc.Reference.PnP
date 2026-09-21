@@ -17,4 +17,6 @@ Clients commonly need the same coordinated sequence across several subsystem typ
 
 Clients require broad access to individual subsystem operations.
 
-See [UserManagementFacade.cs](UserManagementFacade.cs).
+## Required files
+
+- [Roles.cs](Roles.cs): [Facade](Roles.cs), [SubsystemA](Roles.cs), and [SubsystemB](Roles.cs).

@@ -17,6 +17,6 @@ The grammar is small, stable, and expression evaluation needs to be explicit and
 
 The grammar is large, fast-changing, or better served by a parser generator.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Expression.cs](Expression.cs) — expression contract and terminal/non-terminal expressions.

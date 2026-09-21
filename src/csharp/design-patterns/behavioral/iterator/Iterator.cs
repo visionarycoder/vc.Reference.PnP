@@ -1,64 +1,27 @@
 namespace Snippets.DesignPatterns.Behavioral.Iterator;
 
-// Generic iterator interface
-
-// Iterable interface
-
-// Basic iterator implementation
-public abstract class Iterator<T>(IList<T> items) : IIterator<T>
+public interface IIterator<out T>
 {
-    protected int Position = -1;
-    protected readonly IList<T> Items = items ?? throw new ArgumentNullException(nameof(items));
+    bool MoveNext();
 
-    public virtual bool HasNext()
-    {
-        return Position + 1 < Items.Count;
-    }
-
-    public virtual T Next()
-    {
-        if (!HasNext())
-        {
-            throw new InvalidOperationException("No more elements");
-        }
-
-        Position++;
-        return Items[Position];
-    }
-
-    public virtual void Reset()
-    {
-        Position = -1;
-    }
-
-    public virtual T Current
-    {
-        get
-        {
-            if (Position < 0 || Position >= Items.Count)
-            {
-                throw new InvalidOperationException("Iterator is not positioned on a valid element");
-            }
-
-            return Items[Position];
-        }
-    }
+    T Current { get; }
 }
 
-// Forward iterator
+public interface IAggregate<T>
+{
+    IIterator<T> CreateIterator();
+}
 
-// Reverse iterator
+public sealed class ListAggregate<T>(IReadOnlyList<T> items) : IAggregate<T>
+{
+    public IIterator<T> CreateIterator() => new ListIterator<T>(items);
+}
 
-// Skip iterator (every nth element)
+public sealed class ListIterator<T>(IReadOnlyList<T> items) : IIterator<T>
+{
+    private int index = -1;
 
-// Filter iterator
+    public T Current => index >= 0 && index < items.Count ? items[index] : throw new InvalidOperationException();
 
-// Transform iterator
-
-// Custom collection class
-
-// Tree Iterator Example - Depth-First Traversal
-
-// Matrix Iterator Example
-
-// Pagination Iterator
+    public bool MoveNext() => ++index < items.Count;
+}

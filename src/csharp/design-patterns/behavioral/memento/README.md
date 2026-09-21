@@ -17,6 +17,6 @@ You need snapshots, checkpoints, or undo while preserving the originator's imple
 
 State is large, frequent snapshots are costly, or a command history better describes the changes.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Memento.cs](Memento.cs) — originator, immutable memento, and caretaker roles.

@@ -8,20 +8,18 @@ namespace DesignPatterns.Tests;
 public sealed class ReferenceSmokeTests
 {
     [TestMethod]
-    public void BuilderCreatesAnIndependentConfiguredComputer()
+    public void BuilderCreatesAnIndependentProduct()
     {
-        var builder = new ComputerBuilder();
+        var builder = new ConcreteBuilder();
 
-        var computer = builder
-            .SetCpu("Test CPU")
-            .SetRam(32)
-            .AddAccessory("Keyboard")
-            .Build();
+        builder.BuildPart("Part A");
+        builder.BuildPart("Part B");
+        var product = builder.GetResult();
 
-        Assert.AreEqual("Test CPU", computer.Cpu);
-        Assert.AreEqual(32, computer.Ram);
-        CollectionAssert.Contains(computer.Accessories, "Keyboard");
-        Assert.AreEqual(0, builder.Build().Accessories.Count);
+        CollectionAssert.AreEqual(new[] { "Part A", "Part B" }, product.Parts.ToArray());
+
+        builder.Reset();
+        Assert.AreEqual(0, builder.GetResult().Parts.Count);
     }
 
     [TestMethod]

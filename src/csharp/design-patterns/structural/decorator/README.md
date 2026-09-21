@@ -17,4 +17,6 @@ Behavior must be combined selectively or at runtime without a subclass for every
 
 The behavior is intrinsic and fixed for every instance of a type.
 
-See [TextDecorator.cs](TextDecorator.cs) and [ITextProcessor.cs](ITextProcessor.cs).
+## Required files
+
+- [Roles.cs](Roles.cs): [ITextProcessor](Roles.cs), [BasicTextProcessor](Roles.cs), [TextDecorator](Roles.cs), and [UpperCaseDecorator](Roles.cs).

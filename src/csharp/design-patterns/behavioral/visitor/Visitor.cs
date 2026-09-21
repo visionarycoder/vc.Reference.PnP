@@ -1,55 +1,23 @@
 namespace Snippets.DesignPatterns.Behavioral.Visitor;
 
-/// <summary>
-/// Visitor Pattern Implementation
-/// Separates algorithms from objects they operate on using double dispatch.
-/// Enables adding new operations without modifying existing object structures.
-/// </summary>
-
-#region Basic Visitor Infrastructure
-
-/// <summary>
-/// Abstract visitor base class with default implementation
-/// </summary>
-/// <typeparam name="TResult">Return type of visitor operations</typeparam>
-public abstract class Visitor<TResult> : IVisitor<TResult>
+public interface IVisitor<out TResult>
 {
-    public abstract TResult Visit(ElementA element);
-    public abstract TResult Visit(ElementB element);
-    public abstract TResult Visit(ElementC element);
+    TResult Visit(ElementA element);
 
-    protected virtual TResult DefaultVisit(IVisitable element)
-    {
-        return default(TResult)!;
-    }
+    TResult Visit(ElementB element);
 }
 
-#endregion
+public interface IVisitable
+{
+    TResult Accept<TResult>(IVisitor<TResult> visitor);
+}
 
-#region Basic Elements
+public sealed class ElementA : IVisitable
+{
+    public TResult Accept<TResult>(IVisitor<TResult> visitor) => visitor.Visit(this);
+}
 
-#endregion
-
-#region Document Processing System
-
-#endregion
-
-#region Document Export Visitors
-
-#endregion
-
-#region Document Validation
-
-#endregion
-
-#region AST (Abstract Syntax Tree) System
-
-#endregion
-
-#region AST Visitors
-
-#endregion
-
-#region Serialization Visitors
-
-#endregion
+public sealed class ElementB : IVisitable
+{
+    public TResult Accept<TResult>(IVisitor<TResult> visitor) => visitor.Visit(this);
+}

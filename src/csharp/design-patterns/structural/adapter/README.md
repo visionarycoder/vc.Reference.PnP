@@ -17,4 +17,6 @@ An existing component must satisfy an interface it was not designed to implement
 
 You control both APIs and can align their contracts directly.
 
-See [MediaAdapter.cs](MediaAdapter.cs) for the object adapter example.
+## Required files
+
+- [Roles.cs](Roles.cs): [Target](Roles.cs), [Adaptee](Roles.cs), and [Adapter](Roles.cs).

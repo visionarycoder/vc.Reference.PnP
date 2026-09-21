@@ -17,6 +17,6 @@ Callers depend on a product abstraction and the concrete product is selected by 
 
 You need coordinated creation of multiple related product types; use Abstract Factory instead.
 
-## Source
+## Required files
 
-Start with [ILogger.cs](ILogger.cs) and [LoggerFactory.cs](LoggerFactory.cs). The `Console`, `Database`, and `File` factory/product pairs demonstrate concrete choices.
+- [Canonical.cs](Canonical.cs): creator, factory method, product contract, and concrete product.

@@ -17,6 +17,6 @@ Peer objects are tightly coupled and their collaboration rules need one clear ho
 
 The mediator would become a large, opaque coordinator for unrelated workflows.
 
-## Source
+## Required files
 
-See the [C# sample](.).
+- [Mediator.cs](Mediator.cs) — mediator contract and colleague base role.
