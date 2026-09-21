@@ -1,16 +1,32 @@
 # C# GoF Design Patterns Reference
 
-A buildable, modern-C# reference for the 23 Gang of Four patterns. Start with the task you need to solve, then open the linked pattern folder for its intent, trade-offs, and source.
+A buildable C# 14 reference for the 23 Gang of Four patterns. Start with the task you need to solve, then open the linked pattern folder for its intent, trade-offs, and source.
+
+The solution deliberately contains only the three GoF category projects and their unit-test project. There are no duplicate standalone pattern projects.
 
 ## Requirements and verification
 
 - .NET 10 SDK
 - C# 14
 
+The repository pins the .NET SDK through `global.json`.
+
 ```powershell
 dotnet build vc.PnP.slnx --configuration Release
 dotnet run --project tests/unit/DesignPatterns.Tests --configuration Release
+dotnet run --project src/csharp/design-patterns/behavioral --configuration Release
 ```
+
+The first command builds all four projects in the solution. The second runs the current unit suite (two tests); the third runs the behavioral-pattern console demonstration.
+
+## Solution contents
+
+| Project | Role |
+| --- | --- |
+| `src/csharp/design-patterns/creational/DesignPatterns.Creational.csproj` | Five creational patterns |
+| `src/csharp/design-patterns/structural/DesignPatterns.Structural.csproj` | Seven structural patterns |
+| `src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj` | Eleven behavioral patterns and a console demonstration |
+| `tests/unit/DesignPatterns.Tests/DesignPatterns.Tests.csproj` | Unit tests for the reference code |
 
 ## Find a pattern
 
@@ -51,7 +67,7 @@ tests/
 └── unit/
 ```
 
-Every pattern folder contains its C# example and a focused README. Integration tests, when needed, belong under `tests/integration/`.
+Every pattern folder contains its C# source and a focused README with intent, selection guidance, and source pointers. Unit tests live under `tests/unit/`; integration tests, when needed, belong under `tests/integration/`.
 
 ## Supporting guidance
 
