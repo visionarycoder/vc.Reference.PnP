@@ -8,7 +8,7 @@ A buildable, modern-C# reference for the 23 Gang of Four patterns. Start with th
 - C# 14
 
 ```powershell
-dotnet build VisionaryCoder.PnP.slnx --configuration Release
+dotnet build vc.PnP.slnx --configuration Release
 dotnet run --project tests/unit/DesignPatterns.Tests --configuration Release
 ```
 
