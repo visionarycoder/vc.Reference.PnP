@@ -12,8 +12,6 @@ public class ConsoleLogger : ILogger
 
     public void LogError(string error)
     {
-        Console.ForegroundColor = ConsoleColor.Red;
-        Console.WriteLine($"[CONSOLE ERROR] {error}");
-        Console.ResetColor();
+        Console.WriteLine($"[ERROR] {error}");
     }
 }

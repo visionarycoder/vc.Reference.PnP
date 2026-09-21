@@ -14,10 +14,12 @@ The repository pins the .NET SDK through `global.json`.
 ```powershell
 dotnet build vc.PnP.slnx --configuration Release
 dotnet run --project tests/unit/DesignPatterns.Tests --configuration Release
+dotnet run --project src/csharp/design-patterns/samples/creational --configuration Release
+dotnet run --project src/csharp/design-patterns/samples/structural --configuration Release
 dotnet run --project src/csharp/design-patterns/samples/behavioral --configuration Release
 ```
 
-The first command builds all five projects in the solution. The second runs the current unit suite (two tests); the third runs the Spectre.Console behavioral-pattern demonstration.
+The first command builds all seven projects in the solution. The second runs the current unit suite (two tests); the remaining commands run the Spectre.Console demonstrations.
 
 ## Solution contents
 
@@ -25,7 +27,9 @@ The first command builds all five projects in the solution. The second runs the 
 | --- | --- |
 | `src/csharp/design-patterns/creational/DesignPatterns.Creational.csproj` | Five creational patterns |
 | `src/csharp/design-patterns/structural/DesignPatterns.Structural.csproj` | Seven structural patterns |
-| `src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj` | Eleven behavioral patterns and a console demonstration |
+| `src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj` | Eleven behavioral patterns |
+| `src/csharp/design-patterns/samples/creational/DesignPatterns.Creational.Samples.csproj` | Spectre.Console host for creational samples |
+| `src/csharp/design-patterns/samples/structural/DesignPatterns.Structural.Samples.csproj` | Spectre.Console host for structural samples |
 | `src/csharp/design-patterns/samples/behavioral/DesignPatterns.Behavioral.Samples.csproj` | Spectre.Console host for behavioral samples |
 | `tests/unit/DesignPatterns.Tests/DesignPatterns.Tests.csproj` | Unit tests for the reference code |
 
@@ -64,12 +68,14 @@ src/csharp/design-patterns/
 ├── creational/  # 5 patterns
 ├── structural/  # 7 patterns
 ├── behavioral/  # 11 patterns
-└── samples/behavioral/  # executable Spectre.Console samples
+└── samples/  # executable Spectre.Console samples, grouped by GoF category
 tests/
 └── unit/
 ```
 
 Every pattern folder contains its C# source and a focused README with intent, selection guidance, and source pointers. Unit tests live under `tests/unit/`; integration tests, when needed, belong under `tests/integration/`.
+
+The category libraries expose pattern roles and collaborators only. User-facing terminal rendering belongs to the sample applications; legacy explanatory messages remain available as debug-only diagnostics and are removed from Release builds.
 
 ## Supporting guidance
 

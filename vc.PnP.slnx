@@ -3,7 +3,9 @@
   <Project Path="src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj" />
   <Project Path="src/csharp/design-patterns/samples/behavioral/DesignPatterns.Behavioral.Samples.csproj" />
     <Project Path="src/csharp/design-patterns/creational/DesignPatterns.Creational.csproj" />
+    <Project Path="src/csharp/design-patterns/samples/creational/DesignPatterns.Creational.Samples.csproj" />
     <Project Path="src/csharp/design-patterns/structural/DesignPatterns.Structural.csproj" />
+    <Project Path="src/csharp/design-patterns/samples/structural/DesignPatterns.Structural.Samples.csproj" />
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/tests/" />
