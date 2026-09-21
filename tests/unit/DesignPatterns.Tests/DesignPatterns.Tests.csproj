@@ -12,8 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="../../../src/csharp/design-patterns/DesignPatterns.Behavioral/DesignPatterns.Behavioral.csproj" />
-    <ProjectReference Include="../../../src/csharp/design-patterns/DesignPatterns.Creational/DesignPatterns.Creational.csproj" />
-    <ProjectReference Include="../../../src/csharp/design-patterns/DesignPatterns.Structural/DesignPatterns.Structural.csproj" />
+    <ProjectReference Include="../../../src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj" />
+    <ProjectReference Include="../../../src/csharp/design-patterns/creational/DesignPatterns.Creational.csproj" />
+    <ProjectReference Include="../../../src/csharp/design-patterns/structural/DesignPatterns.Structural.csproj" />
   </ItemGroup>
 </Project>

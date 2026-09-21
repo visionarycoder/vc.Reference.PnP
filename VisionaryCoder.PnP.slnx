@@ -1,6 +1,6 @@
 <Solution>
-  <Project Path="src/csharp/design-patterns/DesignPatterns.Creational/DesignPatterns.Creational.csproj" />
-  <Project Path="src/csharp/design-patterns/DesignPatterns.Structural/DesignPatterns.Structural.csproj" />
-  <Project Path="src/csharp/design-patterns/DesignPatterns.Behavioral/DesignPatterns.Behavioral.csproj" />
+  <Project Path="src/csharp/design-patterns/creational/DesignPatterns.Creational.csproj" />
+  <Project Path="src/csharp/design-patterns/structural/DesignPatterns.Structural.csproj" />
+  <Project Path="src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj" />
   <Project Path="tests/unit/DesignPatterns.Tests/DesignPatterns.Tests.csproj" />
 </Solution>
