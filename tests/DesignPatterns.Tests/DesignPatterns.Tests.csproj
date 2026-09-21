@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsTestProject>true</IsTestProject>
+    <OutputType>Exe</OutputType>
+    <EnableMSTestRunner>true</EnableMSTestRunner>
+    <TestingPlatformDotnetTestSupport>true</TestingPlatformDotnetTestSupport>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Testing.Extensions.CodeCoverage" />
+    <PackageReference Include="MSTest" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../../src/csharp/design_patterns/DesignPatterns.Behavioral/DesignPatterns.Behavioral.csproj" />
+    <ProjectReference Include="../../src/csharp/design_patterns/DesignPatterns.Creational/DesignPatterns.Creational.csproj" />
+    <ProjectReference Include="../../src/csharp/design_patterns/DesignPatterns.Structural/DesignPatterns.Structural.csproj" />
+  </ItemGroup>
+</Project>

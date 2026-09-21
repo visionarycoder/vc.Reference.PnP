@@ -46,5 +46,7 @@
     <PackageVersion Include="Microsoft.Data.Analysis" Version="0.22.0" />
     <PackageVersion Include="Plotly.NET" Version="5.0.0" />
     <PackageVersion Include="Plotly.NET.Interactive" Version="5.0.0" />
+    <PackageVersion Include="Microsoft.Testing.Extensions.CodeCoverage" Version="18.11.0" />
+    <PackageVersion Include="MSTest" Version="4.1.0" />
   </ItemGroup>
 </Project>
