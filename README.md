@@ -34,6 +34,8 @@ src/csharp/design_patterns/
 
 Each category project contains one folder per pattern. `DesignPatterns.Behavioral` also has a console runner that exercises its examples.
 
+Unit tests live under `tests/unit/`. Future integration tests belong under `tests/integration/`.
+
 ## Supporting guidance
 
 The retained architecture guidance is available in [docs/best-practices](docs/best-practices/). It is supplementary reference material, not a prerequisite for using the pattern examples.

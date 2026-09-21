@@ -2,5 +2,5 @@
   <Project Path="src/csharp/design_patterns/DesignPatterns.Creational/DesignPatterns.Creational.csproj" />
   <Project Path="src/csharp/design_patterns/DesignPatterns.Structural/DesignPatterns.Structural.csproj" />
   <Project Path="src/csharp/design_patterns/DesignPatterns.Behavioral/DesignPatterns.Behavioral.csproj" />
-  <Project Path="tests/DesignPatterns.Tests/DesignPatterns.Tests.csproj" />
+  <Project Path="tests/unit/DesignPatterns.Tests/DesignPatterns.Tests.csproj" />
 </Solution>
