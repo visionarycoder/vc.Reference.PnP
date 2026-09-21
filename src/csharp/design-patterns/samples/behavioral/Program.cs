@@ -8,37 +8,61 @@ using Snippets.DesignPatterns.Behavioral.State;
 using Snippets.DesignPatterns.Behavioral.Strategy;
 using Snippets.DesignPatterns.Behavioral.TemplateMethod;
 using Snippets.DesignPatterns.Behavioral.Visitor;
+using Console = Spectre.Console.AnsiConsole;
+using FigletText = Spectre.Console.FigletText;
+using Color = Spectre.Console.Color;
 
-Console.WriteLine("🎯 Behavioral Patterns Demonstration\n");
+Console.Write(new FigletText("GoF") { Color = Color.CornflowerBlue });
+Console.MarkupLine("[bold]Behavioral pattern samples[/] — executable examples built on the pure pattern library.\n");
 
-// Chain of Responsibility Pattern Demo
+// WHAT: Route one request through ordered handlers.
+// WHERE: The chain, handlers, and request contracts are in the behavioral library.
+// WHY: The sample proves that senders stay decoupled from the handler that accepts a request.
 await DemonstrateChainOfResponsibility();
 
-// Command Pattern Demo
+// WHAT: Encapsulate operations so callers can queue, undo, and redo them.
+// WHERE: Command objects live in the behavioral library; this host drives their collaboration.
+// WHY: The console makes the invoker/receiver split visible without adding UI concerns to the pattern.
 DemonstrateCommandPattern();
 
-// Iterator Pattern Demo
+// WHAT: Traverse aggregates through an iterator instead of their internal representation.
+// WHERE: Iterator types remain in the behavioral library.
+// WHY: The sample contrasts traversal choices while keeping collection structure private.
 DemonstrateIteratorPattern();
 
-// Interpreter Pattern Demo
+// WHAT: Model and evaluate a small expression grammar.
+// WHERE: Tokens, parser, and expressions are pure behavioral-library types.
+// WHY: The host exposes evaluation results and error paths without coupling the grammar to the terminal.
 DemonstrateInterpreterPattern();
 
-// Mediator Pattern Demo
+// WHAT: Centralize collaboration among peer objects.
+// WHERE: Mediator and colleague types remain independent of console rendering.
+// WHY: The transcript shows how peers avoid direct knowledge of each other.
 await DemonstrateMediatorPattern();
 
-// Memento Pattern Demo
+// WHAT: Capture and restore state without exposing an originator's internals.
+// WHERE: Originators, mementos, and caretakers live in the behavioral library.
+// WHY: The sample makes checkpoint and restore behavior observable at the application edge.
 await DemonstrateMementoPattern();
 
-// State Pattern Demo
+// WHAT: Vary behavior by replacing an object's current state.
+// WHERE: States and contexts remain pure library collaborators.
+// WHY: The console traces transitions so the state boundary is easy to follow.
 await DemonstrateStatePattern();
 
-// Strategy Pattern Demo
+// WHAT: Choose an interchangeable algorithm at runtime.
+// WHERE: Strategy contracts and implementations are defined in the behavioral library.
+// WHY: The sample compares outcomes without making the algorithm selection part of the core API.
 await DemonstrateStrategyPattern();
 
-// Template Method Pattern Demo
+// WHAT: Preserve an algorithm skeleton while varying selected steps.
+// WHERE: Template base classes and concrete steps remain in the behavioral library.
+// WHY: The output highlights which steps vary and which orchestration stays stable.
 await DemonstrateTemplateMethodPattern();
 
-// Visitor Pattern Demo
+// WHAT: Add operations to a stable object structure.
+// WHERE: Elements and visitors stay in the behavioral library.
+// WHY: The sample demonstrates double dispatch at the presentation edge.
 await DemonstrateVisitorPattern();
 
 Console.WriteLine("\n" + new string('=', 80));
@@ -202,35 +226,35 @@ static void DemonstrateCommandPattern()
     var insertExclamation = new InsertTextCommand(editor, "!", 11);
 
     commandManager.ExecuteCommand(insertHello);
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     commandManager.ExecuteCommand(insertWorld);
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     commandManager.ExecuteCommand(insertExclamation);
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     // Test undo operations
     Console.WriteLine("\n--- Undo Operations ---");
     commandManager.Undo();
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     commandManager.Undo();
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     // Test redo operations
     Console.WriteLine("\n--- Redo Operations ---");
     commandManager.Redo();
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     // Test delete command
     Console.WriteLine("\n--- Delete Operation ---");
     var deleteCommand = new DeleteTextCommand(editor, 0, 5);
     commandManager.ExecuteCommand(deleteCommand);
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     commandManager.Undo();
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     // Test macro command
     Console.WriteLine("\n--- Macro Command ---");
@@ -243,10 +267,10 @@ static void DemonstrateCommandPattern()
 
     commandManager.ClearHistory();
     commandManager.ExecuteCommand(macro);
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     commandManager.Undo();
-    Console.WriteLine(editor);
+    Console.WriteLine(editor.ToString());
 
     // Universal Remote Control Example
     Console.WriteLine("\n--- Universal Remote Control ---");
@@ -1724,7 +1748,7 @@ static async Task DemonstrateVisitorPattern()
     ast.Accept(analyzer);
     var analysis = analyzer.GetResult();
     Console.WriteLine("📊 AST Analysis:");
-    Console.WriteLine(analysis);
+    Console.WriteLine(analysis.ToString());
 
     // Advanced AST examples
     Console.WriteLine("\n🔄 Complex expression evaluation:");

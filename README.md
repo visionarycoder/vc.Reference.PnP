@@ -14,10 +14,10 @@ The repository pins the .NET SDK through `global.json`.
 ```powershell
 dotnet build vc.PnP.slnx --configuration Release
 dotnet run --project tests/unit/DesignPatterns.Tests --configuration Release
-dotnet run --project src/csharp/design-patterns/behavioral --configuration Release
+dotnet run --project src/csharp/design-patterns/samples/behavioral --configuration Release
 ```
 
-The first command builds all four projects in the solution. The second runs the current unit suite (two tests); the third runs the behavioral-pattern console demonstration.
+The first command builds all five projects in the solution. The second runs the current unit suite (two tests); the third runs the Spectre.Console behavioral-pattern demonstration.
 
 ## Solution contents
 
@@ -26,6 +26,7 @@ The first command builds all four projects in the solution. The second runs the 
 | `src/csharp/design-patterns/creational/DesignPatterns.Creational.csproj` | Five creational patterns |
 | `src/csharp/design-patterns/structural/DesignPatterns.Structural.csproj` | Seven structural patterns |
 | `src/csharp/design-patterns/behavioral/DesignPatterns.Behavioral.csproj` | Eleven behavioral patterns and a console demonstration |
+| `src/csharp/design-patterns/samples/behavioral/DesignPatterns.Behavioral.Samples.csproj` | Spectre.Console host for behavioral samples |
 | `tests/unit/DesignPatterns.Tests/DesignPatterns.Tests.csproj` | Unit tests for the reference code |
 
 ## Find a pattern
@@ -62,7 +63,8 @@ The first command builds all four projects in the solution. The second runs the 
 src/csharp/design-patterns/
 ├── creational/  # 5 patterns
 ├── structural/  # 7 patterns
-└── behavioral/  # 11 patterns
+├── behavioral/  # 11 patterns
+└── samples/behavioral/  # executable Spectre.Console samples
 tests/
 └── unit/
 ```
